@@ -13,7 +13,6 @@
   <!-- DEMO CSS ONLY -->
   <style media="screen">
     body{background-color:#F4F1EA}.avatar,.line{background:#37394C;display:block}.container{width:100%;max-width:700px;margin:0 auto}.avatar{width:60px;height:60px;margin-bottom:10px}.line{height:6px;width:100%;margin-bottom:8px;opacity:.7}p{font-family:sans-serif;color:#37394C;font-weight:100;line-height:24px}a,h3{font-family:sans-serif;color:#37394C;font-weight:600;font-size:16px}.box{width:60%;float:left;overflow:hidden;height:300px;display:inline-block;margin:30px 0}a{color:#62B83C}
-
     .box {
       overflow: scroll;
     }
@@ -38,11 +37,15 @@
     <a href="https://github.com/zouhir/preact-widgets-boilerplate">Please Check README.md</a>
 
     <h3>DEMO</h3>
+
+
     <!-- your widget -->
     <div id="external-widget-place">
       <script async src="/build/bundle.js"></script>
     </div>
     <!--// tada.. -->
+
+
 
     <div class="line"></div>
     <div class="line four"></div>
@@ -53,17 +56,21 @@
     <p>Such a login widget might need to be in multiple places around the page, eg. sidebar or off-canvas nav or, really anywhere else.</p>
     <p>Just include the bundle once and clone it as much as you want just like the following example</p>
 
+		<!-- Clone -->
     <div class="box-here">
       <script type="text/'javascript" data-widget="login">
         [{"clone": ["external-widget-place"]}]
       </script>
     </div>
+		<!-- // Clone 1 -->
 
+		<!-- Clone -->
     <div class="box-here-too">
       <script type="text/'javascript" data-widget>
         [{"clone": ["external-widget-place"]}]
       </script>
     </div>
+		<!-- // Clone 2 -->
 
   </div>
 </body>

@@ -1,5 +1,5 @@
-import { h, Component } from 'preact'
-import style from './style.scss'
+import { h, Component } from 'preact';
+import style from './style';
 
 export default class SigninWidget extends Component {
   render () {
@@ -18,6 +18,6 @@ export default class SigninWidget extends Component {
           <a class={style.formFooter}>I don't have an account</a>
         </div>
       </div>
-    )
+    );
   }
 }
