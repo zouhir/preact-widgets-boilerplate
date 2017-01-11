@@ -1,1 +1,8 @@
 /node_modules
+
+# ignore build
+/build
+
+# ignore test coverage
+/coverage.data
+/coverage/

@@ -6,14 +6,14 @@ import { h, render } from 'preact';
 let root;
 
 function init() {
-	let Widget = require('./components/widget').default;
+  let Widget = require('./components/widget').default;
 
   let currentScriptTag = document.currentScript || (function() {
     let scripts = document.getElementsByTagName('script');
     return scripts[scripts.length - 1];
   })();
 
-  console.log(`rendering main widget inside ${currentScriptTag.parentNode.id}`)
+  console.log(`rendering main widget inside ${currentScriptTag.parentNode.id}`);
   // render main copy of our widget
   render(<Widget />, currentScriptTag.parentNode, root);
 
@@ -24,10 +24,10 @@ function init() {
     document.querySelectorAll('script[data-widget]'),
     script => {
       let config;
-      try { config = JSON.parse(script.textContent)[0]; } catch(e) {}
+      try { config = JSON.parse(script.textContent)[0]; } catch (e) {}
       if (!config) return;
       [].forEach.call(config.clone, domId => {
-        if(domId == currentScriptTag.parentNode.id) {
+        if (domId === currentScriptTag.parentNode.id) {
           render(
             h(
               Widget,
@@ -39,14 +39,13 @@ function init() {
         }
       });
     }
-  )
+  );
 }
-
 
 // in development, set up HMR:
 if (module.hot) {
-	require('preact/devtools');   // enables React DevTools
-	module.hot.accept('./components/widget', () => requestAnimationFrame(init) );
+  require('preact/devtools');   // enables React DevTools
+  module.hot.accept('./components/widget', () => requestAnimationFrame(init) );
 }
 
 init();
