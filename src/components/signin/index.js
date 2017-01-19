@@ -8,7 +8,7 @@ export default class SigninWidget extends Component {
         <h3>External Signin Widget</h3>
 
         <a href='' class={`${style.basebtn} ${style.google}`}>Continue using Google</a>
-        <a href='' class={`${style.basebtn} ${style.facebook}`}>Continue using Facebook</a>
+        { this.props.hideFacebook ? null : <a href='' class={`${style.basebtn} ${style.facebook}`}>Continue using Facebook</a> }
         <hr />
         <input type='text' placeholder='Email address' />
         <input type='password' placeholder='Password' />

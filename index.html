@@ -22,12 +22,6 @@
 <body>
   <div class="container">
     <div class="avatar"></div>
-    <div class="line"></div>
-    <div class="line one"></div>
-    <div class="line three"></div>
-    <div class="line two"></div>
-    <div class="line four"></div>
-
     <p>
       This boilerplate will help you create a Preact widget that you can ship probably over your CDN so other websites can re-use it and benefit from it.
       The final bundle is JavScript, UMD and should integrate smoothly into any website and web application. The Sign in form below is it!
@@ -38,38 +32,23 @@
 
     <h3>DEMO</h3>
 
+		<div data-widget-id="one-more-here-hop-hop"></div>
 
-    <!-- your widget -->
-    <div id="external-widget-place">
-      <script async src="/build/bundle.js"></script>
-    </div>
-    <!--// tada.. -->
-
-
-
-    <div class="line"></div>
-    <div class="line four"></div>
-    <div class="line three"></div>
-    <div class="line two"></div>
-    <div class="line four"></div>
     <h3>MULTIPLE CLONES</h3>
     <p>Such a login widget might need to be in multiple places around the page, eg. sidebar or off-canvas nav or, really anywhere else.</p>
     <p>Just include the bundle once and clone it as much as you want just like the following example</p>
 
-		<!-- Clone -->
-    <div class="box-here">
-      <script type="text/'javascript" data-widget="login">
-        [{"clone": ["external-widget-place"]}]
-      </script>
+    <!-- your widget -->
+    <div id="external-widget-place">
+      <script async src="/build/bundle.js">
+				[
+					{
+						"mount": ["one-more-here-hop-hop"]
+					}
+				]
+			</script>
     </div>
-		<!-- // Clone 1 -->
-
-		<!-- Clone -->
-    <div class="box-here-too">
-      <script type="text/'javascript" data-widget>
-        [{"clone": ["external-widget-place"]}]
-      </script>
-    </div>
+    <!--// tada.. -->
 		<!-- // Clone 2 -->
 
   </div>
