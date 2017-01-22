@@ -8,7 +8,7 @@
     "prestart": "npm run build",
     "build": "cross-env NODE_ENV=production webpack -p --progress && node ./tools/build.cli.js",
     "prebuild": "mkdirp build",
-    "test": "npm run -s lint && npm run -s test:karma && && node ./tools/test.cli.js",
+    "test": "npm run lint && npm run -s test:karma && node ./tools/test.cli.js",
     "test:karma": "karma start test/karma.conf.js --single-run",
     "lint": "eslint ./src/ || true && node ./tools/lint.cli.js"
   },
@@ -72,7 +72,7 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
-    "preact": "^6.0.0",
+    "preact": "^7.1.0",
     "preact-compat": "^3.0.0",
     "promise-polyfill": "^6.0.2",
     "proptypes": "^0.14.3",
