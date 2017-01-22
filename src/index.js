@@ -1,7 +1,7 @@
 // import 'promise-polyfill';
 // import 'isomorphic-fetch';
 
-import { render } from 'preact-habitat';
+import { render } from '../dev_modules/lib';
 
 let root;
 
