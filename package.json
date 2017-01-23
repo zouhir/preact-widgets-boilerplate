@@ -74,8 +74,21 @@
   "dependencies": {
     "preact": "^7.1.0",
     "preact-compat": "^3.0.0",
+    "preact-habitat": "^0.6.2",
     "promise-polyfill": "^6.0.2",
     "proptypes": "^0.14.3",
     "serve": "^2.0.0"
-  }
+  },
+  "main": "webpack.config.babel.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zouhir/preact-widgets-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zouhir/preact-widgets-boilerplate/issues"
+  },
+  "homepage": "https://github.com/zouhir/preact-widgets-boilerplate#readme"
 }
