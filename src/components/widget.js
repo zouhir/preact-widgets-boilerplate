@@ -8,9 +8,9 @@ export default class Widget extends Component {
   render() {
     let hideFacebook = this.props.hideFacebook || false;
     return (
-			<div id="signin-widget">
+      <div id="signin-widget">
         <SigninWidget />
-			</div>
+      </div>
     );
   }
 }
