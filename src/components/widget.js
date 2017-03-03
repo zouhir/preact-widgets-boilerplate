@@ -3,7 +3,6 @@ import { h, Component } from 'preact';
 
 // ours
 import SigninWidget from './signin';
-import Welcome from './welcome';
 
 export default class Widget extends Component {
   state = {

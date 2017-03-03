@@ -7,14 +7,14 @@ import path from 'path';
 
 const ENV = process.env.NODE_ENV || 'development';
 
-const CSS_MAPS = ENV!=='production';
+const CSS_MAPS = ENV !== 'production';
 
 module.exports = {
-  context: path.resolve(__dirname, "src"),
+  context: path.resolve(__dirname, 'src'),
   entry: './index.js',
 
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/',
     filename: 'bundle.js',
     libraryTarget: 'umd'
@@ -23,14 +23,14 @@ module.exports = {
   resolve: {
     extensions: ['', '.jsx', '.js', '.json', '.scss'],
     modulesDirectories: [
-      path.resolve(__dirname, "src/lib"),
-      path.resolve(__dirname, "node_modules"),
+      path.resolve(__dirname, 'src/lib'),
+      path.resolve(__dirname, 'node_modules'),
       'node_modules'
     ],
     alias: {
-      components: path.resolve(__dirname, "src/components"),    // used for tests
-      style: path.resolve(__dirname, "src/style"),
-      'react': 'preact-compat',
+      components: path.resolve(__dirname, 'src/components'), // used for tests
+      style: path.resolve(__dirname, 'src/style'),
+      react: 'preact-compat',
       'react-dom': 'preact-compat'
     }
   },
@@ -73,28 +73,34 @@ module.exports = {
       },
       {
         test: /\.(svg|woff2?|ttf|eot|jpe?g|png|gif)(\?.*)?$/i,
-        loader: ENV==='production' ? 'file?name=[path][name]_[hash:base64:5].[ext]' : 'url'
+        loader: ENV === 'production'
+          ? 'file?name=[path][name]_[hash:base64:5].[ext]'
+          : 'url'
       }
     ]
   },
 
-  postcss: () => [
-    autoprefixer({ browsers: 'last 2 versions' })
-  ],
+  postcss: () => [autoprefixer({ browsers: 'last 2 versions' })],
 
-  plugins: ([
+  plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(ENV)
     })
-  ]).concat(ENV==='production' ? [
-   // strip out babel-helper invariant checks
-    new ReplacePlugin([{
-      // this is actually the property name https://github.com/kimhou/replace-bundle-webpack-plugin/issues/1
-      partten: /throw\s+(new\s+)?[a-zA-Z]+Error\s*\(/g,
-      replacement: () => 'return;('
-    }])
-  ] : []),
+  ].concat(
+    ENV === 'production'
+      ? [
+          // strip out babel-helper invariant checks
+          new ReplacePlugin([
+            {
+              // this is actually the property name https://github.com/kimhou/replace-bundle-webpack-plugin/issues/1
+              partten: /throw\s+(new\s+)?[a-zA-Z]+Error\s*\(/g,
+              replacement: () => 'return;('
+            }
+          ])
+        ]
+      : []
+  ),
 
   stats: { colors: true },
 
@@ -107,14 +113,14 @@ module.exports = {
     setImmediate: false
   },
 
-  devtool: ENV==='production' ? 'source-map' : '',
+  devtool: ENV === 'production' ? 'source-map' : '',
 
   devServer: {
     port: process.env.PORT || 8080,
     host: 'localhost',
     colors: true,
     publicPath: '/build',
-    contentBase: './public',
+    contentBase: './',
     historyApiFallback: true,
     open: true
   }
