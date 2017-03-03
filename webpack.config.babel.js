@@ -36,13 +36,6 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: path.resolve(__dirname, 'src'),
-        loader: 'source-map'
-      }
-    ],
     loaders: [
       {
         test: /\.jsx?$/,
@@ -114,14 +107,14 @@ module.exports = {
     setImmediate: false
   },
 
-  devtool: ENV==='production' ? 'source-map' : 'cheap-module-eval-source-map',
+  devtool: ENV==='production' ? 'source-map' : '',
 
   devServer: {
     port: process.env.PORT || 8080,
     host: 'localhost',
     colors: true,
     publicPath: '/build',
-    contentBase: './',
+    contentBase: './public',
     historyApiFallback: true,
     open: true
   }

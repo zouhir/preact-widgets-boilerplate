@@ -1,11 +1,13 @@
 // import 'promise-polyfill';
 // import 'isomorphic-fetch';
 
-import { render } from 'preact-habitat';
+import habitat from './dev_modules';
 
 function init() {
+  console.log(typeof habitat)
   let Widget = require('./components/widget').default;
-  render(Widget);
+  let niceLogin = habitat(Widget);
+  niceLogin.render()
 }
 
 // in development, set up HMR:
