@@ -2,7 +2,11 @@
 
 > Sample repo to build small pluggable component widgets
 
-Please check the [demo here](http://preact-habitat.netlify.com/)
+# Demos:
+
+- *Simple Login* 🔑 [link](https://preact-habitat-inline.netlify.com/)
+
+- *Youtube Players* ▶️ [link](https://preact-habitat-youtube.netlify.com/)
 
 
 ## License
