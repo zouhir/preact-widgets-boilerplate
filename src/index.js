@@ -5,18 +5,28 @@ function init() {
   let niceLogin = habitat(Widget);
   /**
    * option 1: render inline
-   */
+  */
   niceLogin.render({
     inline: true,
     clean: false
   });
+
   /**
-   * option 2: client specified
-   */
+   * option 2: render in selector
+  */
   // niceLogin.render({
-  //   clientSpecified: true,
+  //   selector: ".widget-container",
   //   inline: false,
-  //   clean: true
+  //   clean: false
+  // });
+
+  /**
+   * option 3: render in cleinet specified
+  */
+  // niceLogin.render({
+  //   clientSpecified: true
+  //   inline: false,
+  //   clean: false
   // });
 }
 
