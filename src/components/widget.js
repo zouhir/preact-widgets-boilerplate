@@ -21,7 +21,9 @@ export default class Widget extends Component {
       <div id="signin-widget">
         {!isAauthenticated
           ? <SigninWidget
-              title={this.props.title}
+              title={this.props.title} // from DOM
+              btnAccentColor={this.props.btnAccentColor} // from DOM
+              btnText={this.props.btnText}
               mesage={this.props.message}
               handleAuth={this.handleAuth}
             />

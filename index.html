@@ -35,9 +35,15 @@
 	  <h2>Demo</h2>
 
 		<!-- that's how we embed the widget using habitat -->
-	  <div class="demo-box" id="thrid-party-login-wrapper" data-prop-title="Fantastic">
-	    <sup>total: 18kb minified, 7kb gzipped</sup>
-
+	  <div class="demo-box" id="thrid-party-login-wrapper">
+      <sup>total: 18kb minified, 7kb gzipped</sup>
+      <script type="text/props">
+        {
+          "title": "Codepen App Login",
+          "btnAccentColor": "#FFBB41",
+          "btnText": "Sign in NOW!"
+        }
+      </script>
 			<!-- THAT IS ALL YOU NEED -->
 			<script async src="/build/bundle.js" type="text/javascript"></script>
 

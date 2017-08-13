@@ -1,10 +1,23 @@
 import habitat from 'preact-habitat';
+import Widget from './components/widget';
 
 function init() {
-  console.log(typeof habitat);
-  let Widget = require('./components/widget').default;
   let niceLogin = habitat(Widget);
-  niceLogin.render();
+  /**
+   * option 1: render inline
+   */
+  niceLogin.render({
+    inline: true,
+    clean: false
+  });
+  /**
+   * option 2: client specified
+   */
+  // niceLogin.render({
+  //   clientSpecified: true,
+  //   inline: false,
+  //   clean: true
+  // });
 }
 
 // in development, set up HMR:
