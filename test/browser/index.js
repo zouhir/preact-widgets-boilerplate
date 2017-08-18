@@ -22,7 +22,7 @@ describe('App', () => {
 
 	describe('Siginin widget', () => {
 		it('Should render Signin Widget', () => {
-			render(<SigninWidget />, scratch);
+			render(<SigninWidget title="External Signin Widget" />, scratch);
 			rerender();
 
 			expect(scratch.innerHTML).to.contain(`<h3>External Signin Widget</h3>`);
