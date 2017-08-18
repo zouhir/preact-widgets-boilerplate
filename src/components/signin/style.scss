@@ -1,10 +1,10 @@
 // widgets colors variables
-$beige: #F4F1EA;
-$yellow: #FFBB41;
-$black: #37394C;
-$google-red: #EA4335;
+$beige: #f4f1ea;
+$yellow: #ffbb41;
+$black: #37394c;
+$google-red: #ea4335;
 $facebook-blue: #3b5998;
-$white-sand: #FAF8F5;
+$white-sand: #faf8f5;
 
 .signinWidget {
   * {
@@ -12,8 +12,8 @@ $white-sand: #FAF8F5;
   }
   position: relative;
   border-radius: 6px;
-  background: #FFF;
-  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.10);
+  background: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.10);
   width: 100%;
   max-width: 500px;
   margin: 30px auto 30px auto;
@@ -29,7 +29,7 @@ $white-sand: #FAF8F5;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background: #FFF;
+      background: #fff;
       padding: 0px 10px;
     }
   }
@@ -51,7 +51,8 @@ $white-sand: #FAF8F5;
   .colTwo {
     width: 60%;
   }
-  input[type="text"] , input[type="password"] {
+  input[type="text"],
+  input[type="password"] {
     height: 40px;
     line-height: 38px;
     width: 100%;
@@ -78,7 +79,7 @@ $white-sand: #FAF8F5;
   line-height: 40px;
   text-decoration: none;
   border-radius: 3px;
-  color: #FFF;
+  color: #fff;
   &.google {
     background: $google-red;
     margin: 15px auto;
@@ -102,7 +103,7 @@ $white-sand: #FAF8F5;
   max-width: 500px;
   margin: 10px auto;
   overflow: hidden;
-  &:last-child{
+  &:last-child {
     margin-bottom: 0px;
   }
 }
