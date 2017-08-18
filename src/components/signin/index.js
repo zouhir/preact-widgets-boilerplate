@@ -5,10 +5,10 @@ export default class SigninWidget extends Component {
   render() {
     return (
       <div class={style.signinWidget}>
-        <h3>{this.props.title}</h3>
-        <a class={style.basebtn + ' ' + style.google}>
-          Continue using Google
-        </a>
+        <h3>
+          {this.props.title}
+        </h3>
+        <a class={style.basebtn + ' ' + style.google}>Continue using Google</a>
         <a class={`${style.basebtn} ${style.facebook}`}>
           Continue using Facebook
         </a>
@@ -19,9 +19,9 @@ export default class SigninWidget extends Component {
           <a
             class={style.basebtn + ' ' + style.default}
             onClick={this.props.handleAuth}
-            style={{backgroundColor: this.props.btnAccentColor}}
-            >
-            { this.props.btnText }
+            style={{ backgroundColor: this.props.btnAccentColor }}
+          >
+            {this.props.btnText}
           </a>
           <a class={style.formFooter}>Forgot your password</a>
           <a class={style.formFooter}>{`I don't have an account`}</a>
